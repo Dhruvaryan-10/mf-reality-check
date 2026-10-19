@@ -1,0 +1,5 @@
+1. Over every 5-year window since 2013, the average large-cap fund beat a plain Nifty 50 index fund 71.5% of the time.
+2. Index fund (UTI Nifty 50 Index) 5-year CAGR: 5.8%. Large-cap funds beating it over the last 5 years: 4 of 5.
+3. Choosing Regular over Direct: on Rs 10 lakh, the biggest gap was Nippon India Small Cap - Rs 2,124,553 less over 13.8 years (average gap across funds: Rs 989,064).
+4. Scariest fall: Nippon India Small Cap dropped -48.6% from its peak (bottom on 2020-03-24).
+5. Best Rs 5,000/month SIP since 2016: Nippon India Small Cap - Rs 650,000 invested became Rs 2,216,711 (21.4% a year).

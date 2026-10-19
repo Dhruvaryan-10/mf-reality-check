@@ -1,0 +1,52 @@
+[
+ {
+  "category": "mid_cap",
+  "funds": 4,
+  "median_cagr_5y": 0.1471,
+  "median_roll5": 0.1913,
+  "avg_roll5_beat_index": 0.9441,
+  "avg_max_drawdown": -0.3504,
+  "avg_volatility": 0.1623,
+  "avg_sip_xirr": 0.1825
+ },
+ {
+  "category": "small_cap",
+  "funds": 5,
+  "median_cagr_5y": 0.1273,
+  "median_roll5": 0.2146,
+  "avg_roll5_beat_index": 0.9853,
+  "avg_max_drawdown": -0.4247,
+  "avg_volatility": 0.172,
+  "avg_sip_xirr": 0.1883
+ },
+ {
+  "category": "flexi_cap",
+  "funds": 5,
+  "median_cagr_5y": 0.0928,
+  "median_roll5": 0.1583,
+  "avg_roll5_beat_index": 0.8061,
+  "avg_max_drawdown": -0.36,
+  "avg_volatility": 0.1492,
+  "avg_sip_xirr": 0.1369
+ },
+ {
+  "category": "large_cap",
+  "funds": 5,
+  "median_cagr_5y": 0.0889,
+  "median_roll5": 0.1535,
+  "avg_roll5_beat_index": 0.7148,
+  "avg_max_drawdown": -0.3712,
+  "avg_volatility": 0.1545,
+  "avg_sip_xirr": 0.123
+ },
+ {
+  "category": "index",
+  "funds": 2,
+  "median_cagr_5y": 0.0576,
+  "median_roll5": 0.133,
+  "avg_roll5_beat_index": 0.2603,
+  "avg_max_drawdown": -0.3839,
+  "avg_volatility": 0.153,
+  "avg_sip_xirr": 0.1053
+ }
+]
