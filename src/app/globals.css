@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Colour tokens, also read by the charts (components/charts/EChart.tsx) */
+:root {
+  color-scheme: dark;
+  --bg: #080b14;
+  --surface: #0b1020;
+  --surface-2: #10172a;
+  --line: rgba(148, 163, 184, 0.14);
+  --fg: #e8ecf4;
+  --fg-2: #a7b0c4;
+  --fg-3: #717c95;
+  --direct: #4c8dff;
+  --regular: #e25d2c;
+  --index: #8c96ab;
+  --band: rgba(226, 93, 44, 0.22);
+}
+
+@layer base {
+  html {
+    background: var(--bg);
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-ink-900 font-sans text-fg antialiased;
+    font-feature-settings: "ss01";
+  }
+  h1,
+  h2,
+  h3 {
+    @apply font-display tracking-tight;
+    text-wrap: balance;
+  }
+  ::selection {
+    background: rgba(76, 141, 255, 0.35);
+  }
+  :focus-visible {
+    outline: 2px solid var(--direct);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+}
+
+@layer utilities {
+  .tnum {
+    font-variant-numeric: tabular-nums;
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+  .text-pretty {
+    text-wrap: pretty;
+  }
+  /* Dot grid that fades out toward the edges */
+  .dot-grid {
+    background-image: radial-gradient(rgba(148, 163, 184, 0.16) 1px, transparent 1px);
+    background-size: 22px 22px;
+    mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black 30%, transparent 75%);
+  }
+  .glass {
+    background: rgba(11, 16, 32, 0.6);
+    backdrop-filter: blur(14px) saturate(140%);
+    -webkit-backdrop-filter: blur(14px) saturate(140%);
+  }
+  .hairline {
+    border: 1px solid var(--line);
+  }
+}
+
+/* Lenis smooth scrolling */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* Border beam: a light that travels around a card's edge */
+@property --beam-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+.border-beam {
+  position: relative;
+  isolation: isolate;
+}
+.border-beam::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: conic-gradient(
+    from var(--beam-angle),
+    transparent 0deg,
+    transparent 280deg,
+    rgba(76, 141, 255, 0.9) 320deg,
+    rgba(226, 93, 44, 0.9) 350deg,
+    transparent 360deg
+  );
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: beam 7s linear infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+@keyframes beam {
+  to {
+    --beam-angle: 360deg;
+  }
+}
+
+/* Native selects on dark backgrounds */
+select option,
+select optgroup {
+  background: #10172a;
+  color: #e8ecf4;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
